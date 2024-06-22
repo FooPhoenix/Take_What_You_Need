@@ -1,0 +1,161 @@
+
+ID = FooPhoenix.TakeWhatYouNeed
+Author = "FooPhoenix"
+Name = "Take What You Need"
+Version = 1.2.0
+
+CompatibleGameVersions = ["0.20.0", "0.21.0", "0.22.0", "0.23.0"]
+
+ModifiesMultiplayer = true
+
+Description = "This mod alllows crew to take any quantity of power cells from all reactors and power storages.\nUpdated for the game version '0.23.xx'."
+Logo = "logo.png"
+
+Actions
+[
+	
+	// BASE GAME // ============================================================================================
+
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/power_storage/power_storage.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/reactor_small/reactor_small.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+			InitPickUp = 501
+			PickUpRate = 20000
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/reactor_med/reactor_med.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+			InitPickUp = 501
+			PickUpRate = 20000
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/reactor_large/reactor_large.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+			InitPickUp = 501
+			PickUpRate = 20000
+		}
+	}
+
+	// 799600/2886481069 // BetterCapacitors // ============================================================================================
+
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2886481069/PowerStorageMedium/PowerStorageMedium.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2886481069/PowerStorageLarge/PowerStorageLarge.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+
+	// 799600/2891110298 // More Power Storages // ============================================================================================
+
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_tiny/power_storage_tiny.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_medium/power_storage_medium.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_large/power_storage_large.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+
+	// 799600/2886407857 // Compact power storage // ============================================================================================
+
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2886407857/power_storage_small/power_storage_small.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+		}
+	}
+
+	// 799600/2879478059 // Galactic Allegiance // ============================================================================================
+
+	{
+		Action = Overrides
+		OverrideIn = "<../../../workshop/content/799600/2879478059/Parts/Power/reactor_phantom/reactor_phantom.rules>/Part/Components/BatteryStorage"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			MinResourcesPickUp = 1000
+			MaxResourcesPickUp = 3000
+			InitPickUp = 501
+			PickUpRate = 20000
+		}
+	}
+]
+

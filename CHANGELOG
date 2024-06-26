@@ -1,0 +1,87 @@
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Version         : 1.3.0                                                                                              ║
+║ Committed       : 2024.06.26                                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Update to add more other mods compatibility.
+
+───> Added      <───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    - The changelog file.
+    - The licence file.
+    - The version file.
+    
+    - The parts of the mod "Star Wars : A Cosmos Divided" are now supported.
+        - Compact Reinforced Reactor
+        - Light Reinforced Reactor
+        - Heavy Reinforced Reactor
+        - Huge Hypermatter Reactor
+        - Colossal Hypermatter Reactor
+        
+    - The parts of the mod "Jani's Shipyard" are now supported.
+        - Auxiliary Reactor Core
+        - Large Hyperium Fusion Reactor Core
+        
+    - The parts of the mod "Samedit" are now supported.
+        - Fusion Battery Storage
+        - Fusion Reactor Small
+        - Fusion Reactor Medium
+        - Fusion Reactor Large
+        
+    - The parts of the mod "Titan's parts" are now supported.
+        - TITAN Medium Reactor
+        
+    - The parts of the mod "Maltis Game Overhaul Core Mod" are now supported.
+        - Fighter Generator
+        - Generator With Capacitor
+        - Phantom-Reactor MK1
+        - Military Generator MK1
+        - Biofuel Generator MK1
+        - Phantom-Reactor MK2
+        - Generator With Capacitor MK2
+        - Military Generator MK2
+        
+    - The parts of the mod "Extended Tech Tree Mod." are now supported.
+        - Improved Power Capacitor
+        - Advanced Power Capacitor
+        - Hyperium Fuelled Small Reactor Core
+        - Tiny Reactor Core
+        - Boosted Small Reactor Core
+        - Advanced Small Reactor Core
+        - Boosted Medium Reactor Core
+        - Advanced Medium Reactor Core
+        - Boosted Large Reactor Core
+        - Advanced Large Reactor Core
+    
+    - A Steam preview image to explain the mecanics.
+    - 11 Steam preview images to show supported parts.
+    
+───> Changed    <───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    - `InitPickUp` is now always equal to `MinResourcesPickUp`.
+    - `PickUpRate` is now always equal to `MaxResourcesPickUp` / 0.1
+    - Updated the Steam workshop logo. (logo.png)
+    
+───> Checked    <───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    - The "Base game" parts are still supported correclty.
+        - Power Storage
+        - Small Reactor
+        - Medium Reactor
+        - Large Reactor
+    
+    - The parts of the mod "Better Capacitors" are still supported correclty.
+        - Medium Power Storage
+        - Large Power Storage
+    
+    - The parts of the mod "More Power Storages" are still supported correclty.
+        - Tiny Power Storage
+        - Medium Power Storage
+        - Large Power Storage
+    
+    - The parts of the mod "Compact Power Storage" are still supported correclty.
+        - Small Power Storage
+    
+    - The parts of the mod "Galactic Allegiance" are still supported correclty.
+        - Phantom Reactor
+        

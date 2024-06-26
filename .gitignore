@@ -1,2 +1,12 @@
 .timetracker
 Take_what_you_need/.workshop
+.vscode/extensions.json
+.vscode/settings.json
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/.vsixmanifest
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/CHANGELOG.md
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/icon.png
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/language-configuration.json
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/LICENSE.md
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/package.json
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/README.md
+.vscode/extensions/ataxica.cosmoteer-rules-0.0.2/syntaxes/cosmoteer-rules.tmLanguage.json

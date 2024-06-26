@@ -1,161 +1,821 @@
+//
+// Author : FooPhoenix
+//
+// Licence : MIT License
+// Repository : https://github.com/FooPhoenix/Take_What_You_Need
+//
+// Other Contributors :
+//
+//
+// =============================================================================
 
 ID = FooPhoenix.TakeWhatYouNeed
 Author = "FooPhoenix"
 Name = "Take What You Need"
-Version = 1.2.0
+Version = 1.3.0
 
-CompatibleGameVersions = ["0.20.0", "0.21.0", "0.22.0", "0.23.0"]
+// =============================================================================
 
-ModifiesMultiplayer = true
+CompatibleGameVersions = ["0.20.0", "0.21.0", "0.22.0", "0.23.0", "0.24.0", "0.25.0", "0.26.0"]
+ModifiesMultiplayer    = true
+
+// =============================================================================
 
 Description = "This mod alllows crew to take any quantity of power cells from all reactors and power storages.\nUpdated for the game version '0.23.xx'."
 Logo = "logo.png"
 
 Actions
 [
-	
-	// BASE GAME // ============================================================================================
+	// =========================================================================
+	// === BASE GAME ===========================================================
+	// =========================================================================
 
-	{
-		Action = Overrides
-		OverrideIn = "<ships/terran/power_storage/power_storage.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = false
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<ships/terran/reactor_small/reactor_small.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = false
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-			InitPickUp = 501
-			PickUpRate = 20000
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<ships/terran/reactor_med/reactor_med.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = false
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-			InitPickUp = 501
-			PickUpRate = 20000
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<ships/terran/reactor_large/reactor_large.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = false
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-			InitPickUp = 501
-			PickUpRate = 20000
-		}
-	}
+        // Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<ships/terran/power_storage/power_storage.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
+        
+        // Small Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<ships/terran/reactor_small/reactor_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Medium Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<ships/terran/reactor_med/reactor_med.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Large Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<ships/terran/reactor_large/reactor_large.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
 
-	// 799600/2886481069 // BetterCapacitors // ============================================================================================
+	// =========================================================================
+	// === MOD: Better Capacitors ==============================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2886481069
+        // Last compatibility check : 2024.06.22
 
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2886481069/PowerStorageMedium/PowerStorageMedium.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2886481069/PowerStorageLarge/PowerStorageLarge.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
+        // Medium Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2886481069/PowerStorageMedium/PowerStorageMedium.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
+        
+        // Large Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2886481069/PowerStorageLarge/PowerStorageLarge.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
 
-	// 799600/2891110298 // More Power Storages // ============================================================================================
+	// =========================================================================
+	// === MOD: More Power Storages ============================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2891110298
+        // Last compatibility check : 2024.06.22
 
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_tiny/power_storage_tiny.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_medium/power_storage_medium.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_large/power_storage_large.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
+        // Tiny Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_tiny/power_storage_tiny.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
 
-	// 799600/2886407857 // Compact power storage // ============================================================================================
+        // Medium Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_medium/power_storage_medium.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
+        
+        // Large Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2891110298/power_storage_large/power_storage_large.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
 
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2886407857/power_storage_small/power_storage_small.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-		}
-	}
+	// =========================================================================
+	// === MOD: Compact Power Storage ==========================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2886407857
+        // Last compatibility check : 2024.06.22
 
-	// 799600/2879478059 // Galactic Allegiance // ============================================================================================
+        // Small Power Storage
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2886407857/power_storage_small/power_storage_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
 
-	{
-		Action = Overrides
-		OverrideIn = "<../../../workshop/content/799600/2879478059/Parts/Power/reactor_phantom/reactor_phantom.rules>/Part/Components/BatteryStorage"
-		CreateIfNotExisting = false
-		IgnoreIfNotExisting = true
-		Overrides
-		{
-			MinResourcesPickUp = 1000
-			MaxResourcesPickUp = 3000
-			InitPickUp = 501
-			PickUpRate = 20000
-		}
-	}
+	// =========================================================================
+	// === MOD: Galactic Allegiance ============================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2879478059
+        // Last compatibility check : 2024.06.22
+
+        // Phantom Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2879478059/Parts/Power/reactor_phantom/reactor_phantom.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+	// =========================================================================
+	// === MOD: Star Wars : A Cosmos Divided ===================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=3119349707
+        // Last compatibility check : 2024.06.22
+        
+        // Compact Reinforced Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/3119349707/Reactor/Battery/Small/tiny.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Light Reinforced Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/3119349707/Reactor/Battery/Small/small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+        // Heavy Reinforced Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/3119349707/Reactor/Battery/Large/large.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+                
+        // Huge Hypermatter Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/3119349707/Reactor/HyperMatter/Giga/hypermatter_reactor_12x12.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+        // Colossal Hypermatter Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/3119349707/Reactor/HyperMatter/Giga/hypermatter_reactor_30x30.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+	// =========================================================================
+	// === MOD: Jani's Shipyard ================================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2880017812
+        // Last compatibility check : 2024.06.23
+        
+        // Auxiliary Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2880017812/Parts/Power/Reactoraux/reac.txt>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Large Hyperium Fusion Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2880017812/Parts/Power/Fusion Reactor/Fusion_reactor.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 6000
+                InitPickUp = 1000
+                PickUpRate = 6000 / 0.1
+            }
+        }
+    
+	// =========================================================================
+	// === MOD: Samedit ========================================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2882377356
+        // Last compatibility check : 2024.06.23
+        
+        // Fusion Battery Storage
+        {
+            Action = Overrides
+
+            OverrideIn = "<../../../workshop/content/799600/2882377356/power/blue_power_storage/blue_power_storage.rules>/Part/Components/BatteryStorage"
+
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+            }
+        }
+        
+        // Fusion Reactor Small
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2882377356/power/fusion_reactor_small/fusion_reactor_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Fusion Reactor Medium
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2882377356/power/fusion_reactor_med/fusion_reactor_med.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Fusion Reactor Large
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2882377356/power/fusion_reactor_large/fusion_reactor_large.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+	// =========================================================================
+	// === MOD: Titan's parts ==================================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2893839719
+        // Last compatibility check : 2024.06.23
+        
+        // TITAN Medium Reactor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2893839719/my mod/Reactor/reactor_med/reactor_med.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+	// =========================================================================
+	// === MOD: Maltis Game Overhaul Core Mod ==================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2889343435
+        // Last compatibility check : 2024.06.23
+        
+        // Military Generator MK1
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorSmall/smallBattleShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Phantom-Reactor MK1
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorSmall/smallPhantomShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+        // Generator With Capacitor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorSmall/smallHighCapShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Fighter Generator
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorSmall/smallShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+        // Military Generator MK2
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorMedium/mediumBattleShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Phantom-Reactor MK2
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorMedium/mediumPhantomShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+        // Generator With Capacitor MK2
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorMedium/mediumHighCapShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Biofuel Generator MK1
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2889343435/core/parts/reactors/reactorMedium/mediumShipBattery.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+
+	// =========================================================================
+	// === MOD: Extended Tech Tree Mod. ========================================
+	// =========================================================================
+    
+        // URL : https://steamcommunity.com/sharedfiles/filedetails/?id=2946411143
+        // Last compatibility check : 2024.06.24
+
+        // Improved Power Capacitor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/power_storage/power_storage_imp.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 12000
+            }
+        }
+        
+        // Advanced Power Capacitor
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/power_storage/power_storage.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 12000
+            }
+        }
+        
+        // Hyperium Fuelled Small Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_small/dpmh_reactor_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Tiny Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_small/dpmk_reactor_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Boosted Small Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_small/dpmc_reactor_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Advanced Small Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_small/dpm_reactor_small.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 12000
+                InitPickUp = 1000
+                PickUpRate = 12000 / 0.1
+            }
+        }
+        
+        // Boosted Medium Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_med/dpmc_reactor_med.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Advanced Medium Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_med/dpm_reactor_med.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 12000
+                InitPickUp = 1000
+                PickUpRate = 12000 / 0.1
+            }
+        }
+        
+        // Boosted Large Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_large/dpmc_reactor_large.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 3000
+                InitPickUp = 1000
+                PickUpRate = 3000 / 0.1
+            }
+        }
+        
+        // Advanced Large Reactor Core
+        {
+            Action = Overrides
+            
+            OverrideIn = "<../../../workshop/content/799600/2946411143/power/reactor_large/dpm_reactor_large.rules>/Part/Components/BatteryStorage"
+            
+            CreateIfNotExisting = false
+            IgnoreIfNotExisting = true
+            
+            Overrides
+            {
+                MinResourcesPickUp = 1000
+                MaxResourcesPickUp = 12000
+                InitPickUp = 1000
+                PickUpRate = 12000 / 0.1
+            }
+        }
 ]
 

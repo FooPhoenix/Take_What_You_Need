@@ -12,16 +12,16 @@
 ID = FooPhoenix.TakeWhatYouNeed
 Author = "FooPhoenix"
 Name = "Take What You Need"
-Version = 1.3.0
+Version = 1.3.1
 
 // =============================================================================
 
-CompatibleGameVersions = ["0.20.0", "0.21.0", "0.22.0", "0.23.0", "0.24.0", "0.25.0", "0.26.0"]
+CompatibleGameVersions = ["0.20.0", "0.21.0", "0.22.0", "0.23.0", "0.24.0", "0.25.0", "0.26.0", "0.27.0"]
 ModifiesMultiplayer    = true
 
 // =============================================================================
 
-Description = "This mod alllows crew to take any quantity of power cells from all reactors and power storages.\nUpdated for the game version '0.23.xx'."
+Description = "This mod alllows crew to take any quantity of power cells from all reactors and power storages.\nUpdated for the game version '0.27.xx'."
 Logo = "logo.png"
 
 Actions
